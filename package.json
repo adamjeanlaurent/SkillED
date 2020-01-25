@@ -1,0 +1,20 @@
+{
+  "name": "hackatbrown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamjeanlaurent/unnamed-hackaton-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamjeanlaurent/unnamed-hackaton-project/issues"
+  },
+  "homepage": "https://github.com/adamjeanlaurent/unnamed-hackaton-project#readme"
+}
