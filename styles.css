@@ -1,0 +1,65 @@
+.usericon {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 90px;
+    left: 690px;
+}
+
+
+.template {
+    width:100%;
+    height:100%;
+
+}
+
+
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron h1 {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }
+  
+  
+  body {
+    padding-bottom: 20px;
+  }
+  
+  .navbar {
+    margin-bottom: 20px;
+  }
+
+  
+  .navbar-brand {
+    font-family: 'Megrim', cursive;
+
+} 
