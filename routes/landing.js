@@ -84,6 +84,10 @@ router.get('/assessment', (req, res) => {
   res.sendFile('assessment.html',  {root: './views/'})
 })
 
+router.post('/assessment', (req, res) => {
+  return res.redirect('/learningPath');
+})
+
 router.get('/enterInterest', (req, res) => {
   res.sendFile('enterInterestsForm.html',  {root: './views/'})
 })
