@@ -7,9 +7,9 @@ const courseSchema = require('./courseSchema');
 
 const LearningPath = require('./learningPathModel');
 
-const Course = mongoose.model('Course', courseSchema);
+const Course = mongoose.model('Course', courseSchema.courseSchema);
 
-const WebDevelopment = new LearningPath({
+const webDevelopment = new LearningPath.LearningPath({
     title: "Web Development",
     courses: [
         new Course({
