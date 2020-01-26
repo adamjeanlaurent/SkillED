@@ -15,6 +15,13 @@
 
 }
 
+.landing {
+  width:100%;
+  height:100%;
+  
+
+}
+
 
 .jumbotron {
     padding-top: 3rem;
@@ -258,7 +265,7 @@ body {
   
     text-align: center;
   
-    background-image: url(mac.jpg);
+    background-image: url('../imgs/mac.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -277,7 +284,7 @@ body {
   
     text-align: center;
   
-    background-image: url(source.jpg);
+    background-image: url(../imgs/source.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
