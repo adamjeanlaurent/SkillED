@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const courseSchema = require('./courseSchema');
 
 const learningPathSchema = new mongoose.Schema({
-    courses: [courseSchema],
-    title: String
+    title: String,
+    courses: [courseSchema]
 });
 
 const LearningPath = mongoose.model("LearningPath", learningPathSchema);
