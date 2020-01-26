@@ -1,0 +1,30 @@
+#container {
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    /*border: 1px solid #ccc;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn {
+    display: inline-block;
+    margin: 15px; /* space between buttons */
+    text-align: center;
+    font-size: x-large;
+    height: 200px !important;
+    transition: transform 0.5s;
+}
+
+#btn:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+  }
+
+#myButtons {
+    margin: auto;
+}
+
+ 
