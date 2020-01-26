@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const ejs = require('ejs')
+app.set("view engine", "ejs"); 
 
 // TODO: Use correct path for DB
 mongoose.connect('mongodb+srv://adam:adam@hackatbrown-jtc8a.gcp.mongodb.net/test?retryWrites=true&w=majority', 
