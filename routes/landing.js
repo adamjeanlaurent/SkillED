@@ -16,31 +16,6 @@ router.get('/', (req, res) => {
     res.send('Hello world')
 })
 
-
-router.get('/createProfile', (req,res) => {
-  res.sendFile('createProfile.html', {root: './views/'})
-}) 
-
-router.post('/createProfile', (req, res) => {
-  User.User.findOne({email: req.body.email}, (err, foundUser) => {
-    if(foundUser == null) {
-      const testUser = new User.User({
-        fullName: 'Adam Jean-Laurent',
-        email: 'test@gmail.com',
-        DOB: '1-25-98',
-        Gender: 'Male',
-        Password: 'password123'
-      })
-      testUser.save()
-      return res.status(201).json(testUser);
-    }
-    else {
-      let error = "That user already exists";
-      return res.render('createProfile', {error: error});
-    }
-  })
-})
-
 // MAKE PROFILE PAGE
 router.get('/makeProfile', (req,res) => {
   res.sendFile('makeProfile.html', {root: './views/'})
