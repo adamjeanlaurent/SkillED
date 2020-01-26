@@ -4,6 +4,7 @@ const router = express.Router()
 const User = require('../public/models/userModel')
 const bodyParser = require('body-parser')
 const LearningPath = require('../public/models/learningPathModel')
+const Job = require('../public/models/jobModel')
 
 
 router.use(express.static("public"));
@@ -13,7 +14,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 
 router.get('/', (req, res) => {
-    res.send('Hello world')
+    res.sendFile('landingPage.html', {root: './views/'})
 })
 
 // MAKE PROFILE PAGE
@@ -62,6 +63,16 @@ router.get('/learningPath', (req, res) => {
   LearningPath.LearningPath.findOne((err, foundPath) => {
     if(foundPath != null) {
       return res.render('../views/learningPath.ejs', {title: foundPath.title, courses: foundPath.courses})
+    }
+  })
+})
+
+// how to know what the user's learning plan is ??
+router.get('/jobPostings', (req, res) => {
+  let userIndustry = 'Tech';
+  Job.Job.find({industry: tech}, (err, jobs) => {
+    if(jobs.length != 0) {
+      return res.render('jobPostings')
     }
   })
 })
