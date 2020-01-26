@@ -4,7 +4,11 @@ const courseSchema = require('./courseSchema');
 
 const learningPathSchema = new mongoose.Schema({
     title: String,
-    courses: [courseSchema]
+    courses: [{
+        url: String,
+        name: String,
+        imageLink: String
+    }]
 });
 
 const LearningPath = mongoose.model("LearningPath", learningPathSchema);

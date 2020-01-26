@@ -3,6 +3,10 @@ const router = express.Router()
 
 const User = require('../public/models/userModel')
 const bodyParser = require('body-parser')
+const LearningPath = require('../public/models/learningPathModel')
+
+
+router.use(express.static("public"));
 
 router.use(bodyParser.urlencoded({extended: true}));
 
@@ -55,6 +59,16 @@ router.get('/allUsers', async (req, res) => {
       } catch (err) {
         res.status(500).json({ message: err.message })
       }
+})
+
+// how to get the learning path ??
+router.get('/learningPath', (req, res) => {
+  let userLearningPath = 'Web Development'
+  LearningPath.LearningPath.findOne((err, foundPath) => {
+    if(foundPath != null) {
+      return res.render('../views/learningPath.ejs', {title: foundPath.title, courses: foundPath.courses})
+    }
+  })
 })
 
 module.exports = router
