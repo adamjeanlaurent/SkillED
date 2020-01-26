@@ -47,3 +47,10 @@
   .step.finish {
     background-color: #4CAF50;
   } 
+
+
+  .usericon {
+    width: 20%;
+    height: 20%;
+    border-radius: 25px;
+  }
