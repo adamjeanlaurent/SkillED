@@ -7,6 +7,6 @@ const jobSchema = new mongoose.Schema({
     Industry : String
 });
 
-const Job = mongoose.model("Job", jobSchema);
+const Job = mongoose.model("job", jobSchema);
 
 exports.Job = Job;

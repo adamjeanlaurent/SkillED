@@ -41,7 +41,7 @@ router.post('/makeProfile', (req,res) => {
       })
       user.save()
       // res.status(201).json(user);
-      res.redirect('/')
+      res.redirect('/interestsPage')
   } else {
     res.status(400).json({ message: err.message })
   }
@@ -62,7 +62,7 @@ router.get('/learningPath', (req, res) => {
   let userLearningPath = 'Web Development'
   LearningPath.LearningPath.findOne((err, foundPath) => {
     if(foundPath != null) {
-      return res.render('../views/learningPath.ejs', {title: foundPath.title, courses: foundPath.courses})
+      return res.render('learningPath', {title: foundPath.title, courses: foundPath.courses})
     }
   })
 })
@@ -70,11 +70,22 @@ router.get('/learningPath', (req, res) => {
 // how to know what the user's learning plan is ??
 router.get('/jobPostings', (req, res) => {
   let userIndustry = 'Tech';
-  Job.Job.find({industry: tech}, (err, jobs) => {
-    if(jobs.length != 0) {
-      return res.render('jobPostings')
-    }
+  Job.Job.find({Industry: userIndustry}, (err, jobs) => {
+      return res.render('jobPostings', {jobs: jobs})
+    
   })
+})
+
+router.get('/interestsPage', (req, res) => {
+  res.sendFile('interestsPage.html',  {root: './views/'})
+})
+
+router.get('/assessment', (req, res) => {
+  res.sendFile('assessment.html',  {root: './views/'})
+})
+
+router.get('/enterInterest', (req, res) => {
+  res.sendFile('enterInterestsForm.html',  {root: './views/'})
 })
 
 module.exports = router
