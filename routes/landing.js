@@ -32,6 +32,10 @@ router.post('/createProfile', (req, res) => {
   })
 })
 
+router.get('/makeProfile', (req,res) => {
+  res.sendFile('makeProfile.html', {root: './views/'})
+}) 
+
 
 router.get('/allUsers', async (req, res) => {
     try {
