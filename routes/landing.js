@@ -2,6 +2,11 @@ const express = require('express')
 const router = express.Router()
 
 const User = require('../public/models/userModel')
+const bodyParser = require('body-parser')
+
+router.use(bodyParser.urlencoded({extended: true}));
+
+
 
 router.get('/', (req, res) => {
     res.send('Hello world')
@@ -32,8 +37,14 @@ router.post('/createProfile', (req, res) => {
   })
 })
 
+// MAKE PROFILE PAGE
 router.get('/makeProfile', (req,res) => {
   res.sendFile('makeProfile.html', {root: './views/'})
+}) 
+
+router.post('/makeProfile', (req,res) => {
+  console.log(req.body)
+  return res.status(201).json(req.body);
 }) 
 
 
