@@ -43,8 +43,28 @@ router.get('/makeProfile', (req,res) => {
 }) 
 
 router.post('/makeProfile', (req,res) => {
-  console.log(req.body)
-  return res.status(201).json(req.body);
+  if(
+    req.body.fullname_input != null &&
+    req.body.email_input != null &&
+    req.body.dob_input != null &&
+    req.body.gender_input != null &&
+    req.body.gender_input != null &&
+    req.body.password_input != null
+    
+  ) {
+      const user = new User.User({
+        fullName: req.body.fullname_input,
+        email: req.body.email_input,
+        DOB: req.body.dob_input,
+        Gender: req.body.gender_input,
+        Password: req.body.password_input
+      })
+      user.save()
+      // res.status(201).json(user);
+      res.redirect('/')
+  } else {
+    res.status(400).json({ message: err.message })
+  }
 }) 
 
 
