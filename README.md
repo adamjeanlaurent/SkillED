@@ -1,3 +1,5 @@
+<img src = "https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/921/056/datas/gallery.jpg"/>
+
 # Introduction
 SkillED is an accelerated learning, career interests and exploration platform. SkillED is built to allow students from high school and college to explore different careers and learn new skills without the high barriers to entry that are usually presented by internships and other professional experiences. In some industries, students must be highly skilled and posses amazing credentials in order to gain opportunities, but this presents a barrier for people who do not know what they want to do. Making these life choices can be difficult for many students and often people end up in careers completely different from their studies. SkillED remedies this by providing collaborative professional and educational opportunities for companies and students.
 
