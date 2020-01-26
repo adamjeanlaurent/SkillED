@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const courseSchema = new mongoose.Schema({
     url: String,
-    author: String
+    name: String
 });
 
 exports.courseSchema = courseSchema;
