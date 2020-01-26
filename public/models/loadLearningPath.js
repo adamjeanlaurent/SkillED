@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://adam:adam@hackatbrown-jtc8a.gcp.mongodb.net/test?retryWrites=true&w=majority', 
+mongoose.connect('mongodb+srv://adam:adam@hackatbrown-jtc8a.gcp.mongodb.net/test?retryWrites=true&w=majority/test', 
 {useNewUrlParser: true});
 
 const courseSchema = require('./courseSchema');
