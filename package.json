@@ -20,7 +20,7 @@
   "homepage": "https://github.com/adamjeanlaurent/unnamed-hackaton-project#readme",
   "dependencies": {
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.8.9"
   },
   "devDependencies": {
